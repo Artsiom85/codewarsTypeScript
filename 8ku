@@ -1,11 +1,11 @@
-//This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+1.//This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
 
 export const simpleMultiplication = (num: number): number =>
   num * (num % 2 === 0 ? 8 : 9);
 
 
 
-//Remove First and Last Character
+2.//Remove First and Last Character
 //Your goal is to create a function that removes the first and last characters of a string. 
 //You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
 
@@ -20,3 +20,14 @@ or
 export function removeChar(str: string): string {
   return str.slice(1,-1);
 }
+
+3.//Build a function that returns an array of integers from n to 1 where n>0.
+//Example : n=5 --> [5,4,3,2,1]
+export const reverseSeq = (n: number): number[] => {
+  var reverse = [];
+  for(let i = n; i > 0; i--){
+    reverse.push(i);
+  }
+  
+  return reverse;
+};
