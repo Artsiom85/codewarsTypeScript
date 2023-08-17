@@ -3,7 +3,7 @@
 export const simpleMultiplication = (num: number): number =>
   num * (num % 2 === 0 ? 8 : 9);
 
-
+____________________________________________________________________________________________________________________________________________________________________
 
 2.//Remove First and Last Character
 //Your goal is to create a function that removes the first and last characters of a string. 
@@ -20,6 +20,7 @@ or
 export function removeChar(str: string): string {
   return str.slice(1,-1);
 }
+____________________________________________________________________________________________________________________________________________________________________
 
 3.//Build a function that returns an array of integers from n to 1 where n>0.
 //Example : n=5 --> [5,4,3,2,1]
@@ -31,6 +32,7 @@ export const reverseSeq = (n: number): number[] => {
   
   return reverse;
 };
+____________________________________________________________________________________________________________________________________________________________________
 
 4. //Your start-up's BA has told marketing that your website has a large audience in Scandinavia and surrounding countries. Marketing thinks it would be great to welcome visitors to the site in their own language. Luckily you already use an API that detects the user's location, so this is an easy win.
 //Think of a way to store the languages as a database (eg an object). The languages are listed below so you can copy and paste!
@@ -60,8 +62,9 @@ export function greet(language: string): string {
   if (languages[language]) return languages[language];
   return languages['english']
 }
+____________________________________________________________________________________________________________________________________________________________________
 
-//In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
+5.//In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
 //For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
 
 export function findMultiples(integer: number, limit: number): number[] {
@@ -73,3 +76,36 @@ export function findMultiples(integer: number, limit: number): number[] {
 
   return multiples;
 }
+____________________________________________________________________________________________________________________________________________________________________
+//Remove duplicates from the list
+
+6. Define a function that removes duplicates from an array of non negative numbers and returns it as a result.
+
+The order of the sequence has to stay the same.
+
+Examples:
+
+Input -> Output
+[1, 1, 2] -> [1, 2]
+[1, 2, 1, 1, 3, 2] -> [1, 2, 3]
+
+export const distinct = (a: number[]): number[] => {
+  const uniqueNumbers = new Set<number>();
+  const result: number[] = [];
+
+  for (const num of a) {
+    if (!uniqueNumbers.has(num)) {
+      uniqueNumbers.add(num);
+      result.push(num);
+    }
+  }
+
+  return result;
+};
+or
+
+export const distinct = (a: number[]): number[] => {
+  return [...new Set(a)];
+}
+
+____________________________________________________________________________________________________________________________________________________________________
