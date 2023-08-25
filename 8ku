@@ -134,7 +134,7 @@ Output: String with comma delimited elements of the array in th same order.
 
 "h,o,l,a"
 
-export function printArray(array: any[]): string {
-  return array.join(',');
+export function printArray(arr: any[]){
+  return arr.join();
 }
 ____________________________________________________________________________________________________________________________________________________________________
