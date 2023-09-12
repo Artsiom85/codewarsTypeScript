@@ -164,8 +164,6 @@ ________________________________________________________________________________
 
 To count the number of sheep present in the array where true means the sheep is present, you can iterate through the arrayOfSheep and increment a count for each true value you encounter. Here's how you can implement this in JavaScript/TypeScript:
 
-typescript
-Copy code
 export function countSheeps(arrayOfSheep: (boolean | undefined | null)[]): number {
   let count = 0;
 
