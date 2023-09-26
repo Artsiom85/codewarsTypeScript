@@ -183,3 +183,12 @@ export function countSheeps(arrayOfSheep) {
 }
 ____________________________________________________________________________________________________________________________________________________________________
 
+12. Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+For example, for [1, 2, 2] it should return 9 because 
+
+export function squareSum(numbers: number[]): number {
+  // Use the reduce method to square each number and sum the results
+  return numbers.reduce((sum, num) => sum + num * num, 0);
+}
+____________________________________________________________________________________________________________________________________________________________________
